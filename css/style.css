@@ -1,0 +1,315 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/** Globales **/
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+}
+/** Utilidades **/
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/** Header **/
+
+
+.webp .header {
+    background-image: url(../img/fondo2.png);
+    
+}
+.no-webp .header {
+    background-image: url(../img/fondo2.png);
+}
+.header {
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header__texto {
+   text-align: center;
+   color: var(--blanco);
+   margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+.barra {
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo {
+    color: var(--blanco);
+    
+}
+.logo__nombre {
+    
+    font-weight: 700;
+}
+.logo__bold {
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    margin-bottom: 20px;
+}
+
+.navegacion__enlace:hover{
+    background-color: gold;
+}
+.navegacion__enlace:last-child{
+    border: 1.5px solid gold;
+  color: gold;
+}
+.navegacion__enlace:last-child:hover{
+    color: white;
+}
+
+
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+.fondo{
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin: 0;
+    background-attachment: fixed;
+
+}
+.entrada {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.boton--primario {
+    background-color: black;
+}
+.boton--secundario {
+    background-color: black;
+}
+
+.cursos {
+    list-style: none;
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info {
+    font-weight: normal;
+}
+.widget-curso__label,
+.widget-curso__info {
+    font-size: 2rem;
+}
+
+.footer {
+    background-image: url(../img/fondo2.png);
+
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+/** Sobre Nosotros **/
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+/** Cursos **/
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.curso:last-of-type {
+   border: none;
+}
+
+/** Redes sociales**/
+
+nav.redes-sociales {
+    text-align: center;
+  }
+  nav.redes-sociales a {
+    color: white;
+    font-size: 2em;
+    margin-right: 20px;
+  }
+  nav.redes-sociales a:last-child{
+    margin-right: 0;
+  }
+  /**programas**/
+h6 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h6::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
+  }
+  
+div.calendario h3 {
+    background-color: #fe4918;
+    clear: both;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  div.calendario::after {
+    clear: both;
+    display: block;
+    content: '';    
+  }
+  div.dia {
+    width: 100%;
+    float: left;
+    border: 2px solid #e1e1e1;  
+    transition: all .3s ease; 
+  }
+  @media only screen and (min-width:768px) {
+    div.dia {
+      width: 33.3%;
+      min-height: 240px;
+      padding-top: 20px;
+    }
+  }
+  div.dia:hover {
+    background-color: #e1e1e1;
+    transform: scale(1.01);
+  }
+  div.dia p.titulo {
+    color: #fe4918;
+    transform: uppercase;
+    font-weight: bold;
+  }
+  div.dia p {
+    font-size: 1em;
+  }
+  div.dia i {
+    color: #fe4918;
+    font-size: 1.6em;
+  }
+  
